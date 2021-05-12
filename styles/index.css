@@ -1,1 +1,57 @@
-/*Main Css
+/*Main Css*/
+@font-face{
+    font-family: apple;
+    src: url('../fonts/Nimbus-Sans-D-OT-Ultra-Light_32757.ttf');
+}
+body{
+    overflow-x: hidden;
+}
+#icon{
+    width: 8rem;
+}
+#navBar{
+}
+h3{
+    font-family: apple;
+    font-weight: bold;
+    position: relative;
+    left: 3rem;
+    bottom:-1rem;
+    font-size: 2rem;
+    color: black;
+}
+h1{
+    font-family: apple;
+    font-weight: bold;
+    color: black;
+    font-size: 2rem;
+}
+p{
+    font-family: apple;
+    font-weight: bold;
+    position: relative;
+    left:   8rem;
+    bottom: 2.2rem;
+    font-size: 2rem;
+    color: black;
+}
+#temp{
+    border-bottom: groove black .2rem;
+    border-radius: 10%;
+    height: 4rem;
+}
+.accordion-body{
+    background-color: rgb(243, 243, 243);
+    opacity: .9;
+}
+.accordion-item{
+    width: 25rem;
+   margin-left: auto;
+    margin-right: 3rem;
+    position: relative;
+    top: 2rem;
+}
+.accordion-button:not(.collapsed){
+    background-color: rgb(234, 249, 255);
+    opacity: .9;
+}
