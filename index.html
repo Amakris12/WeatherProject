@@ -5,6 +5,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/index.css">
+    <script src="script/jQuery.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Team</title>
@@ -44,10 +45,34 @@
           </div>
         </div>
       </nav>
+      <h1 id="update">Daily Weather Updates <br>Weather.com</h1>
+      <br>
+      <div style="position: relative; left: 5rem; top: 5rem;" id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img id="slide" src="images/icon.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img id="slide" src="images/sunrise.gif" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img id="slide" src="images/sunset.gif" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <h1 id="week">Weekly Forcast</h1>
       <div class="accordion" id="accordionExample">
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><h1>Sunday May 23rd, 2021</h1></button>
+            <button id="Sunday" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><h1>Sunday May 23rd, 2021</h1></button>
           </h2>
           <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
             <div class="accordion-body">
@@ -80,40 +105,40 @@
         </div>
         <div class="accordion-item">
             <h2 class="accordion-header" id="headingTwo">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"><h1>Monday May 24th, 2021</h1></button>
+              <button id="Monday" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"><h1>Monday May 24th, 2021</h1></button>
             </h2>
             <div id="collapseTwo" class="accordion-collapse collapse " aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
               <div class="accordion-body">
               <div id="temp"><h3>1:00am<p>74°F</p></h3></div>
               <div id="temp"><h3>2:00am<p>73°F</p></h3></div>
               <div id="temp"><h3>3:00am<p>75°F</p></h3></div>
-              <div id="temp"><h3>4:00am<p>77°F</p></h3></div>
-              <div id="temp"><h3>5:00am<p>81°F</p></h3></div>
+              <div id="temp"><h3>4:00am<p>79°F</p></h3></div>
+              <div id="temp"><h3>5:00am<p>80°F</p></h3></div>
               <div id="temp"><h3>6:00am<p>83°F</p></h3></div>
-              <div id="temp"><h3>7:00am<p>86°F</p></h3></div>
+              <div id="temp"><h3>7:00am<p>87°F</p></h3></div>
               <div id="temp"><h3>8:00am<p>88°F</p></h3></div>
-              <div id="temp"><h3>9:00am<p>90°F</p></h3></div>
+              <div id="temp"><h3>9:00am<p>92°F</p></h3></div>
               <div id="temp"><h3>10:00am<p>92°F</p></h3></div>
-              <div id="temp"><h3>11:00am<p>95°F</p></h3></div>
+              <div id="temp"><h3>11:00am<p>94°F</p></h3></div>
               <div id="temp"><h3>12:00pm<p>96°F</p></h3></div>
-              <div id="temp"><h3>1:00pm<p>98°F</p></h3></div>
-              <div id="temp"><h3>2:00pm<p>99°F</p></h3></div>
-              <div id="temp"><h3>3:00pm<p>101°F</p></h3></div>
+              <div id="temp"><h3>1:00pm<p>97°F</p></h3></div>
+              <div id="temp"><h3>2:00pm<p>98°F</p></h3></div>
+              <div id="temp"><h3>3:00pm<p>100°F</p></h3></div>
               <div id="temp"><h3>4:00pm<p>100°F</p></h3></div>
-              <div id="temp"><h3>5:00pm<p>96°F</p></h3></div>
+              <div id="temp"><h3>5:00pm<p>95°F</p></h3></div>
               <div id="temp"><h3>6:00pm<p>94°F</p></h3></div>
               <div id="temp"><h3>7:00pm<p>92°F</p></h3></div>
               <div id="temp"><h3>8:00pm<p>90°F</p></h3></div>
               <div id="temp"><h3>9:00pm<p>87°F</p></h3></div>
-              <div id="temp"><h3>10:00pm<p>84°F</p></h3></div>
-              <div id="temp"><h3>11:00pm<p>82°F</p></h3></div>
+              <div id="temp"><h3>10:00pm<p>83°F</p></h3></div>
+              <div id="temp"><h3>11:00pm<p>80°F</p></h3></div>
               <div id="temp"><h3>12:00pm<p>78°F</p></h3></div>
               </div>
             </div>
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header" id="headingThree">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree"><h1>Tuesday May 25th, 2021</h1></button>
+              <button id="tuesday" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree"><h1>Tuesday May 25th, 2021</h1></button>
             </h2>
             <div id="collapseThree" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
               <div class="accordion-body">
@@ -123,34 +148,34 @@
               <div id="temp"><h3>4:00am<p>77°F</p></h3></div>
               <div id="temp"><h3>5:00am<p>81°F</p></h3></div>
               <div id="temp"><h3>6:00am<p>83°F</p></h3></div>
-              <div id="temp"><h3>7:00am<p>86°F</p></h3></div>
-              <div id="temp"><h3>8:00am<p>88°F</p></h3></div>
-              <div id="temp"><h3>9:00am<p>90°F</p></h3></div>
-              <div id="temp"><h3>10:00am<p>92°F</p></h3></div>
-              <div id="temp"><h3>11:00am<p>95°F</p></h3></div>
-              <div id="temp"><h3>12:00pm<p>96°F</p></h3></div>
-              <div id="temp"><h3>1:00pm<p>98°F</p></h3></div>
-              <div id="temp"><h3>2:00pm<p>99°F</p></h3></div>
-              <div id="temp"><h3>3:00pm<p>101°F</p></h3></div>
-              <div id="temp"><h3>4:00pm<p>100°F</p></h3></div>
-              <div id="temp"><h3>5:00pm<p>96°F</p></h3></div>
-              <div id="temp"><h3>6:00pm<p>94°F</p></h3></div>
-              <div id="temp"><h3>7:00pm<p>92°F</p></h3></div>
-              <div id="temp"><h3>8:00pm<p>90°F</p></h3></div>
-              <div id="temp"><h3>9:00pm<p>87°F</p></h3></div>
-              <div id="temp"><h3>10:00pm<p>84°F</p></h3></div>
-              <div id="temp"><h3>11:00pm<p>82°F</p></h3></div>
-              <div id="temp"><h3>12:00pm<p>78°F</p></h3></div>
+              <div id="temp"><h3>7:00am<p>82°F</p></h3></div>
+              <div id="temp"><h3>8:00am<p>81°F</p></h3></div>
+              <div id="temp"><h3>9:00am<p>80°F</p></h3></div>
+              <div id="temp"><h3>10:00am<p>82°F</p></h3></div>
+              <div id="temp"><h3>11:00am<p>81°F</p></h3></div>
+              <div id="temp"><h3>12:00pm<p>80°F</p></h3></div>
+              <div id="temp"><h3>1:00pm<p>83°F</p></h3></div>
+              <div id="temp"><h3>2:00pm<p>84°F</p></h3></div>
+              <div id="temp"><h3>3:00pm<p>86°F</p></h3></div>
+              <div id="temp"><h3>4:00pm<p>88°F</p></h3></div>
+              <div id="temp"><h3>5:00pm<p>87°F</p></h3></div>
+              <div id="temp"><h3>6:00pm<p>84°F</p></h3></div>
+              <div id="temp"><h3>7:00pm<p>82°F</p></h3></div>
+              <div id="temp"><h3>8:00pm<p>82°F</p></h3></div>
+              <div id="temp"><h3>9:00pm<p>81°F</p></h3></div>
+              <div id="temp"><h3>10:00pm<p>81°F</p></h3></div>
+              <div id="temp"><h3>11:00pm<p>80°F</p></h3></div>
+              <div id="temp"><h3>12:00pm<p>74°F</p></h3></div>
               </div>
             </div>
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header" id="headingfour">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour"><h1>Wensday May 26th, 2021</h1></button>
+              <button id="wensday" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour"><h1>Wensday May 26th, 2021</h1></button>
             </h2>
             <div id="collapseFour" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-              <div id="temp"><h3>1:00am<p>74°F</p></h3></div>
+              <div id="temp"><h3>1:00am<p>70°F</p></h3></div>
               <div id="temp"><h3>2:00am<p>73°F</p></h3></div>
               <div id="temp"><h3>3:00am<p>75°F</p></h3></div>
               <div id="temp"><h3>4:00am<p>77°F</p></h3></div>
@@ -158,121 +183,121 @@
               <div id="temp"><h3>6:00am<p>83°F</p></h3></div>
               <div id="temp"><h3>7:00am<p>86°F</p></h3></div>
               <div id="temp"><h3>8:00am<p>88°F</p></h3></div>
-              <div id="temp"><h3>9:00am<p>90°F</p></h3></div>
+              <div id="temp"><h3>9:00am<p>88°F</p></h3></div>
               <div id="temp"><h3>10:00am<p>92°F</p></h3></div>
               <div id="temp"><h3>11:00am<p>95°F</p></h3></div>
-              <div id="temp"><h3>12:00pm<p>96°F</p></h3></div>
-              <div id="temp"><h3>1:00pm<p>98°F</p></h3></div>
-              <div id="temp"><h3>2:00pm<p>99°F</p></h3></div>
-              <div id="temp"><h3>3:00pm<p>101°F</p></h3></div>
-              <div id="temp"><h3>4:00pm<p>100°F</p></h3></div>
+              <div id="temp"><h3>12:00pm<p>94°F</p></h3></div>
+              <div id="temp"><h3>1:00pm<p>94°F</p></h3></div>
+              <div id="temp"><h3>2:00pm<p>95°F</p></h3></div>
+              <div id="temp"><h3>3:00pm<p>96°F</p></h3></div>
+              <div id="temp"><h3>4:00pm<p>97°F</p></h3></div>
               <div id="temp"><h3>5:00pm<p>96°F</p></h3></div>
               <div id="temp"><h3>6:00pm<p>94°F</p></h3></div>
               <div id="temp"><h3>7:00pm<p>92°F</p></h3></div>
-              <div id="temp"><h3>8:00pm<p>90°F</p></h3></div>
+              <div id="temp"><h3>8:00pm<p>88°F</p></h3></div>
               <div id="temp"><h3>9:00pm<p>87°F</p></h3></div>
-              <div id="temp"><h3>10:00pm<p>84°F</p></h3></div>
-              <div id="temp"><h3>11:00pm<p>82°F</p></h3></div>
-              <div id="temp"><h3>12:00pm<p>78°F</p></h3></div>
+              <div id="temp"><h3>10:00pm<p>81°F</p></h3></div>
+              <div id="temp"><h3>11:00pm<p>80°F</p></h3></div>
+              <div id="temp"><h3>12:00pm<p>76°F</p></h3></div>
               </div>
             </div>
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header" id="headingFive">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive"><h1>Thursday May 27rd, 2021</h1></button>
+              <button id="thursday" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive"><h1>Thursday May 27rd, 2021</h1></button>
             </h2>
             <div id="collapseFive" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-              <div id="temp"><h3>1:00am<p>74°F</p></h3></div>
-              <div id="temp"><h3>2:00am<p>73°F</p></h3></div>
-              <div id="temp"><h3>3:00am<p>75°F</p></h3></div>
-              <div id="temp"><h3>4:00am<p>77°F</p></h3></div>
+              <div id="temp"><h3>1:00am<p>75°F</p></h3></div>
+              <div id="temp"><h3>2:00am<p>77°F</p></h3></div>
+              <div id="temp"><h3>3:00am<p>78°F</p></h3></div>
+              <div id="temp"><h3>4:00am<p>79°F</p></h3></div>
               <div id="temp"><h3>5:00am<p>81°F</p></h3></div>
               <div id="temp"><h3>6:00am<p>83°F</p></h3></div>
-              <div id="temp"><h3>7:00am<p>86°F</p></h3></div>
-              <div id="temp"><h3>8:00am<p>88°F</p></h3></div>
+              <div id="temp"><h3>7:00am<p>88°F</p></h3></div>
+              <div id="temp"><h3>8:00am<p>89°F</p></h3></div>
               <div id="temp"><h3>9:00am<p>90°F</p></h3></div>
-              <div id="temp"><h3>10:00am<p>92°F</p></h3></div>
-              <div id="temp"><h3>11:00am<p>95°F</p></h3></div>
-              <div id="temp"><h3>12:00pm<p>96°F</p></h3></div>
-              <div id="temp"><h3>1:00pm<p>98°F</p></h3></div>
-              <div id="temp"><h3>2:00pm<p>99°F</p></h3></div>
-              <div id="temp"><h3>3:00pm<p>101°F</p></h3></div>
+              <div id="temp"><h3>10:00am<p>91°F</p></h3></div>
+              <div id="temp"><h3>11:00am<p>94°F</p></h3></div>
+              <div id="temp"><h3>12:00pm<p>95°F</p></h3></div>
+              <div id="temp"><h3>1:00pm<p>96°F</p></h3></div>
+              <div id="temp"><h3>2:00pm<p>98°F</p></h3></div>
+              <div id="temp"><h3>3:00pm<p>100°F</p></h3></div>
               <div id="temp"><h3>4:00pm<p>100°F</p></h3></div>
-              <div id="temp"><h3>5:00pm<p>96°F</p></h3></div>
-              <div id="temp"><h3>6:00pm<p>94°F</p></h3></div>
-              <div id="temp"><h3>7:00pm<p>92°F</p></h3></div>
-              <div id="temp"><h3>8:00pm<p>90°F</p></h3></div>
-              <div id="temp"><h3>9:00pm<p>87°F</p></h3></div>
-              <div id="temp"><h3>10:00pm<p>84°F</p></h3></div>
-              <div id="temp"><h3>11:00pm<p>82°F</p></h3></div>
-              <div id="temp"><h3>12:00pm<p>78°F</p></h3></div>
+              <div id="temp"><h3>5:00pm<p>101°F</p></h3></div>
+              <div id="temp"><h3>6:00pm<p>100°F</p></h3></div>
+              <div id="temp"><h3>7:00pm<p>97°F</p></h3></div>
+              <div id="temp"><h3>8:00pm<p>95°F</p></h3></div>
+              <div id="temp"><h3>9:00pm<p>93°F</p></h3></div>
+              <div id="temp"><h3>10:00pm<p>90°F</p></h3></div>
+              <div id="temp"><h3>11:00pm<p>85°F</p></h3></div>
+              <div id="temp"><h3>12:00pm<p>82°F</p></h3></div>
               </div>
             </div>
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header" id="headingSix">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix"><h1>Friday May 28th, 2021</h1></button>
+              <button id="friday" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix"><h1>Friday May 28th, 2021</h1></button>
             </h2>
             <div id="collapseSix" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-              <div id="temp"><h3>1:00am<p>74°F</p></h3></div>
-              <div id="temp"><h3>2:00am<p>73°F</p></h3></div>
-              <div id="temp"><h3>3:00am<p>75°F</p></h3></div>
-              <div id="temp"><h3>4:00am<p>77°F</p></h3></div>
+              <div id="temp"><h3>1:00am<p>81°F</p></h3></div>
+              <div id="temp"><h3>2:00am<p>80°F</p></h3></div>
+              <div id="temp"><h3>3:00am<p>76°F</p></h3></div>
+              <div id="temp"><h3>4:00am<p>78°F</p></h3></div>
               <div id="temp"><h3>5:00am<p>81°F</p></h3></div>
-              <div id="temp"><h3>6:00am<p>83°F</p></h3></div>
-              <div id="temp"><h3>7:00am<p>86°F</p></h3></div>
-              <div id="temp"><h3>8:00am<p>88°F</p></h3></div>
+              <div id="temp"><h3>6:00am<p>82°F</p></h3></div>
+              <div id="temp"><h3>7:00am<p>85°F</p></h3></div>
+              <div id="temp"><h3>8:00am<p>86°F</p></h3></div>
               <div id="temp"><h3>9:00am<p>90°F</p></h3></div>
-              <div id="temp"><h3>10:00am<p>92°F</p></h3></div>
-              <div id="temp"><h3>11:00am<p>95°F</p></h3></div>
-              <div id="temp"><h3>12:00pm<p>96°F</p></h3></div>
-              <div id="temp"><h3>1:00pm<p>98°F</p></h3></div>
-              <div id="temp"><h3>2:00pm<p>99°F</p></h3></div>
+              <div id="temp"><h3>10:00am<p>91°F</p></h3></div>
+              <div id="temp"><h3>11:00am<p>93°F</p></h3></div>
+              <div id="temp"><h3>12:00pm<p>94°F</p></h3></div>
+              <div id="temp"><h3>1:00pm<p>96°F</p></h3></div>
+              <div id="temp"><h3>2:00pm<p>97°F</p></h3></div>
               <div id="temp"><h3>3:00pm<p>101°F</p></h3></div>
               <div id="temp"><h3>4:00pm<p>100°F</p></h3></div>
-              <div id="temp"><h3>5:00pm<p>96°F</p></h3></div>
-              <div id="temp"><h3>6:00pm<p>94°F</p></h3></div>
-              <div id="temp"><h3>7:00pm<p>92°F</p></h3></div>
-              <div id="temp"><h3>8:00pm<p>90°F</p></h3></div>
-              <div id="temp"><h3>9:00pm<p>87°F</p></h3></div>
-              <div id="temp"><h3>10:00pm<p>84°F</p></h3></div>
-              <div id="temp"><h3>11:00pm<p>82°F</p></h3></div>
-              <div id="temp"><h3>12:00pm<p>78°F</p></h3></div>
+              <div id="temp"><h3>5:00pm<p>99°F</p></h3></div>
+              <div id="temp"><h3>6:00pm<p>97°F</p></h3></div>
+              <div id="temp"><h3>7:00pm<p>96°F</p></h3></div>
+              <div id="temp"><h3>8:00pm<p>94°F</p></h3></div>
+              <div id="temp"><h3>9:00pm<p>90°F</p></h3></div>
+              <div id="temp"><h3>10:00pm<p>87°F</p></h3></div>
+              <div id="temp"><h3>11:00pm<p>85°F</p></h3></div>
+              <div id="temp"><h3>12:00pm<p>82°F</p></h3></div>
               </div>
             </div>
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header" id="headingSeven">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven"><h1>Saturday May 29th, 2021</h1></button>
+              <button id="Saturday" class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven"><h1>Saturday May 29th, 2021</h1></button>
             </h2>
             <div id="collapseSeven" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-              <div id="temp"><h3>1:00am<p>74°F</p></h3></div>
-              <div id="temp"><h3>2:00am<p>73°F</p></h3></div>
-              <div id="temp"><h3>3:00am<p>75°F</p></h3></div>
-              <div id="temp"><h3>4:00am<p>77°F</p></h3></div>
+              <div id="temp"><h3>1:00am<p>80°F</p></h3></div>
+              <div id="temp"><h3>2:00am<p>79°F</p></h3></div>
+              <div id="temp"><h3>3:00am<p>77°F</p></h3></div>
+              <div id="temp"><h3>4:00am<p>79°F</p></h3></div>
               <div id="temp"><h3>5:00am<p>81°F</p></h3></div>
               <div id="temp"><h3>6:00am<p>83°F</p></h3></div>
-              <div id="temp"><h3>7:00am<p>86°F</p></h3></div>
-              <div id="temp"><h3>8:00am<p>88°F</p></h3></div>
+              <div id="temp"><h3>7:00am<p>88°F</p></h3></div>
+              <div id="temp"><h3>8:00am<p>89°F</p></h3></div>
               <div id="temp"><h3>9:00am<p>90°F</p></h3></div>
-              <div id="temp"><h3>10:00am<p>92°F</p></h3></div>
-              <div id="temp"><h3>11:00am<p>95°F</p></h3></div>
-              <div id="temp"><h3>12:00pm<p>96°F</p></h3></div>
-              <div id="temp"><h3>1:00pm<p>98°F</p></h3></div>
-              <div id="temp"><h3>2:00pm<p>99°F</p></h3></div>
+              <div id="temp"><h3>10:00am<p>91°F</p></h3></div>
+              <div id="temp"><h3>11:00am<p>93°F</p></h3></div>
+              <div id="temp"><h3>12:00pm<p>94°F</p></h3></div>
+              <div id="temp"><h3>1:00pm<p>96°F</p></h3></div>
+              <div id="temp"><h3>2:00pm<p>98°F</p></h3></div>
               <div id="temp"><h3>3:00pm<p>101°F</p></h3></div>
-              <div id="temp"><h3>4:00pm<p>100°F</p></h3></div>
-              <div id="temp"><h3>5:00pm<p>96°F</p></h3></div>
-              <div id="temp"><h3>6:00pm<p>94°F</p></h3></div>
-              <div id="temp"><h3>7:00pm<p>92°F</p></h3></div>
-              <div id="temp"><h3>8:00pm<p>90°F</p></h3></div>
-              <div id="temp"><h3>9:00pm<p>87°F</p></h3></div>
-              <div id="temp"><h3>10:00pm<p>84°F</p></h3></div>
-              <div id="temp"><h3>11:00pm<p>82°F</p></h3></div>
-              <div id="temp"><h3>12:00pm<p>78°F</p></h3></div>
+              <div id="temp"><h3>4:00pm<p>105°F</p></h3></div>
+              <div id="temp"><h3>5:00pm<p>108°F</p></h3></div>
+              <div id="temp"><h3>6:00pm<p>103°F</p></h3></div>
+              <div id="temp"><h3>7:00pm<p>100°F</p></h3></div>
+              <div id="temp"><h3>8:00pm<p>97°F</p></h3></div>
+              <div id="temp"><h3>9:00pm<p>94°F</p></h3></div>
+              <div id="temp"><h3>10:00pm<p>91°F</p></h3></div>
+              <div id="temp"><h3>11:00pm<p>88°F</p></h3></div>
+              <div id="temp"><h3>12:00pm<p>85°F</p></h3></div>
               </div>
             </div>
           </div>
