@@ -41,3 +41,15 @@ $('#Saturday').click(function(){
     $('h3').css('color','white')
     $('p').css('color','white')
 })
+$('#weekly').click(function(){
+})
+$('#Daily').click(function(){
+})
+$('#Hourly').click(function(){
+})
+$('#weekly').hover(function(){
+})
+$('#Daily').hover(function(){
+})
+$('#Hourly').hover(function(){
+})

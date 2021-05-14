@@ -5,14 +5,19 @@
 }
 body{
     overflow-x: hidden;
-    background-color: rgb(190, 190, 190);
+    background-color: rgb(255, 255, 255);
 }
 #navBar{
     background-color: white;
     opacity: .9;
+    background-image: url('../images/gradient.png');
 }
 #icon{
     width: 8rem;
+}
+button{
+    border: none;
+    background-color: transparent;
 }
 h3{
     font-family: apple;
@@ -20,22 +25,22 @@ h3{
     position: relative;
     left: 3rem;
     bottom:-1rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: black;
 }
 h1{
     font-family: apple;
     font-weight: bold;
     color: white;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 p{
     font-family: apple;
     font-weight: bold;
     position: relative;
     left:   8rem;
-    bottom: 2.2rem;
-    font-size: 2rem;
+    bottom: 1.75rem;
+    font-size: 1.5rem;
     color: black;
 }
 #temp{
@@ -48,12 +53,11 @@ p{
     opacity: .9;
 }
 .accordion-item{
-    width: 25rem;
-   margin-left: auto;
-    margin-right: 3rem;
+    width: 22rem;
     position: relative;
-    top: -26.5rem;
-    box-shadow: 2px 2px 2px 2px rgb(255, 255, 255);
+    top: 17rem;
+    left: 65rem;
+    box-shadow: 2px 2px 2px 2px rgb(0, 0, 0);
 }
 .accordion-button:not(.collapsed){
     background-color: rgb(0, 0, 0);
@@ -72,28 +76,81 @@ p{
     height: 30rem;
 }
 #carouselExampleControls{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: relative;
+    margin-left: 17.5rem;
+    margin-top: -3rem;
+    right: 5rem;
     width: 50rem;
     height: 30rem;
-    box-shadow: rgb(255, 255, 255) 2px 2px 2px 2px;
+    box-shadow: rgb(0, 0, 0) 2px 2px 2px 2px;
 }
 #week{
-    box-shadow: rgb(255, 255, 255) 2px 2px 2px 2px;
+    box-shadow: rgb(0, 0, 0) 2px 2px 2px 2px;
     background-color: rgb(0, 0, 0);
     opacity: .9;
     text-align: center;
-    width: 25rem;
+    font-size: 2.3rem;
+    width: 22rem;
     height: 3rem;
     position: absolute;
-    top: 9rem;
-    right: 3rem;
+    top: 61rem;
+    left: 65rem;
+}
+h2{
+    font-weight: bold;
 }
 #update{
-    box-shadow: rgb(255, 255, 255) 2px 2px 2px 2px;
+    box-shadow: rgb(0, 0, 0) 2px 2px 2px 2px;
     background-color: rgb(0, 0, 0);
     opacity: .9;
     text-align: center;
     width: 50rem;
-    position: absolute;
-    top: 9rem;
-    left: 5rem;
+    position: relative;
+    top: 2rem;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
+#update{
+    font-size: 2rem;
+}
+#bar{
+    width: 20rem;
+    text-align: center;
+    font-family: apple;
+    color: white;
+}
+#title{
+    height: 2.5rem;
+    width: 15rem; 
+    text-align: center;
+    font-family: apple;
+    color: white;
+}
+.bg-light{
+    background-image: url('../images/gradient.png');
+    border-bottom: rgb(0, 89, 255) .4rem groove;
+}
+.button{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+#HeaderW{
+    box-shadow: rgb(0, 0, 0) 2px 2px 2px 2px;
+    background-color: black;
+    text-align: center;
+    width: 70rem;
+    height: 6rem;
+    position: relative;
+    top: 10rem;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    font-family: apple;
+    font-weight: bold;
+    font-size: 5rem;
 }
