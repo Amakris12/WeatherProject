@@ -41,18 +41,13 @@ $('#Saturday').click(function(){
     $('h3').css('color','white')
     $('p').css('color','white')
 })
-$('#weekly').click(function(){
+
+$('#expand').click(function(){
+    $('#far').fadeOut(0);
+    $('#cel').fadeIn(1000);
 })
-$('#Daily').click(function(){
-})
-$('#Hourly').click(function(){
-})
-$('#weekly').hover(function(){
-})
-$('#Daily').hover(function(){
-})
-$('#Hourly').hover(function(){
-})
+
+
 
 //everything below here is intended for temperature icons within the accordion
 
