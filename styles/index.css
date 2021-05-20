@@ -43,6 +43,11 @@ p{
     font-size: 1.5rem;
     color: rgb(255, 255, 255);
 }
+h5{
+    font-weight: bold;
+    font-family: apple;
+    font-size: 3rem;
+}
 #temp{
     border-bottom: groove black .2rem;
     border-radius: 10%;
@@ -142,6 +147,7 @@ h2{
 #HeaderW{
     box-shadow: rgb(0, 0, 0) 2px 2px 2px 2px;
     background-color: black;
+    opacity: .9;
     text-align: center;
     width: 70rem;
     height: 6rem;
@@ -190,8 +196,8 @@ h2{
     top: 9rem;
     background-image: url('../images/cloud.jpg');
     background-size: cover;
-    border-top: rgb(0, 89, 255) .4rem groove ;
-    border-bottom: rgb(0, 89, 255) .4rem groove;
+    border-top: rgb(0, 132, 255) .4rem groove ;
+    border-bottom: rgb(0, 140, 255) .4rem groove;
 }
 
 .tempimg{
@@ -279,3 +285,44 @@ width: 1em;
    #daily{
       background-color: white;
   }
+
+  .stuff{
+      width: 11rem;
+      height: 4rem;
+      font-size: 1.3rem;
+      position: relative;
+      right: 4rem;
+      opacity: .9;
+  }
+
+  a{
+      text-decoration: none;
+  }
+
+  #foot{
+      position: relative;
+      top: 25rem;
+      color: black;
+      text-align: center;
+      font-size: 5rem;
+  }
+  #email{
+    position: relative;
+    top: 13rem;
+    color: black;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 78rem;
+    }
+
+    #link{
+        position: relative;
+        top: 13rem;
+        left: 17rem;
+        color: black;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        width: 26rem;
+    }

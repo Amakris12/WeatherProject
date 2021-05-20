@@ -42,12 +42,6 @@ $('#Saturday').click(function(){
     $('p').css('color','white')
 })
 
-$('#expand').click(function(){
-    $('#far').fadeOut(0);
-    $('#cel').fadeIn(1000);
-})
-
-
 
 //everything below here is intended for temperature icons within the accordion
 
