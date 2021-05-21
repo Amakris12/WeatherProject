@@ -8,16 +8,18 @@ body{
     background-color: rgb(255, 255, 255);
 }
 #navBar{
-    background-color: white;
-    opacity: .9;
-    background-image: url('../images/gradient.png');
+    height:3rem;
+    background-image: linear-gradient(rgb(4, 73, 137), rgb(0, 96, 186));
+    
 }
 #icon{
-    width: 8rem;
+    width: 4rem;
+    margin-left:10%;
+    image-rendering: optimizeSpeed;
 }
 button{
-    border: none;
-    background-color: transparent;
+    border:none;
+    background-color: transparent
 }
 h3{
     font-family: apple;
@@ -34,6 +36,44 @@ h1{
     color: white;
     font-size: 1.5rem;
 }
+
+.whitey{
+color:white;
+}
+
+.floaty{
+    animation: float 1s ease-in-out;
+    
+  }
+
+#slidetext{
+    margin-left:5%;
+    margin-top:4%;
+}  
+#wdescrip{
+    font-size: 1.2rem;
+
+}  
+#timenow{margin-bottom: 10%;
+}
+  @keyframes float {
+      0% {
+ 
+          transform: translatey(0px);
+          opacity: 0;
+      }
+      50% {
+         
+          transform: translatey(-20px);
+          opacity: 1;
+      }
+      100% {
+         
+          transform: translatey(0px);
+          
+      }
+  }
+
 p{
     font-family: apple;
     font-weight: bold;
@@ -44,8 +84,7 @@ p{
     color: rgb(255, 255, 255);
 }
 #temp{
-    border-bottom: groove black .2rem;
-    border-radius: 10%;
+    border-bottom: groove rgba(0, 0, 0, 0.259) .2rem;
     height: 4rem;
 }
 .accordion-body{
@@ -85,10 +124,10 @@ p{
     right: 5rem;
     width: 50rem;
     height: 30rem;
-    box-shadow: rgb(0, 0, 0) 2px 2px 2px 2px;
+    box-shadow: rgb(0, 0, 0, 0.15) 2px 2px 2px 2px;
 }
 #week{
-    box-shadow: rgb(0, 0, 0) 2px 2px 2px 2px;
+    box-shadow: rgb(0, 0, 0, 0.15) 2px 2px 2px 2px;
     background-color: rgb(0, 0, 0);
     opacity: .9;
     text-align: center;
@@ -103,7 +142,7 @@ h2{
     font-weight: bold;
 }
 #update{
-    box-shadow: rgb(0, 0, 0) 2px 2px 2px 2px;
+    box-shadow: rgb(0, 0, 0, 0.15) 2px 2px 2px 2px;
     background-color: rgb(0, 0, 0);
     opacity: .9;
     text-align: center;
@@ -131,16 +170,19 @@ h2{
     color: white;
 }
 .bg-light{
-    background-image: url('../images/gradient.png');
-    border-bottom: rgb(0, 89, 255) .4rem groove;
+ 
+    background-image: linear-gradient(rgb(4, 73, 137), rgb(0, 96, 186));
 }
 .button{
+    
     display: flex;
     justify-content: center;
     flex-direction: row;
+    border: none;
+
 }
 #HeaderW{
-    box-shadow: rgb(0, 0, 0) 2px 2px 2px 2px;
+    box-shadow: rgb(0, 0, 0, 0.15) 2px 2px 2px 2px;
     background-color: black;
     text-align: center;
     width: 70rem;
@@ -154,6 +196,7 @@ h2{
     font-weight: bold;
     font-size: 5rem;
 }
+
 #accordion-item2{
     width: 22rem;
     position: relative;
@@ -278,4 +321,10 @@ width: 1em;
 
    #daily{
       background-color: white;
+   }
+
+#slidetext{
+    position: absolute; top:0; left:0;
+    color: white;
+    z-index: 2;
   }
