@@ -10,17 +10,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Team</title>
 </head>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.js"></script> <!--necessary for 'showtime' variable-->
+
+<script> //<-- this chunk of script handles time variables for other scripts!!!
+
+//I establish the variables for the website, all scripts will refer to me when getting the current time.
+
+const airtemp  = Math.floor(Math.random() * (99 - 60 + 1)) + 60; //the temperature of the air
+
+const curtime = Math.floor(Math.random()* 23)+1; //current time, in military format. 12 MT = 12 AM,        20 MT = 8 PM
+var overlaycheck;
+
+
+var showtime = ""; // USE THIS VARIABLE TO DISPLAY AM/PM TIME
+
+function convert(input) {    //this function will convert curtime (Military Time) to standard PM/AM time.
+    return moment(input, 'HH').format('h A');
+}
+showtime = convert(curtime); 
+
+//POSSIBLE WEATHER OUTCOMES BELOW!!!
+
+let weatherlist = [["sunny", "165deg", "Sunny Clear Skies", false],["rainy", "5deg", "Raining Dense Clouds", true ],["cloudy", "0deg", "Slight Wind Dense Clouds", true],["acid", "200deg", "Pouring Acid Safety Hazard", true],["windy", "5deg", "Strong Wind Sparse Clouds", false],["snowing", "5deg", "Snowing Dense Clouds", true]] //the weather RNG list
+//0 = type
+//1 = hueshift amount
+//2 = displayed description
+//3 if the weather has an overlay to accompony it
+
+
+//ps. sorry for yelling, needed something to direct eyes to important info
+
+var rng = Math.floor(Math.random()*weatherlist.length)
+const curweather = weatherlist[rng][0];
+const shift = weatherlist[rng][1];
+wdescrip = weatherlist[rng][2];
+
+
+ //checks if there's an availabe overlay
+if(weatherlist[rng][3] == true){
+overlaycheck = true;
+}else{
+  overlaycheck = false;
+}
+
+
+console.log(showtime);
+
+</script>
+
+
 <body>
   
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div id="navBar" class="container-fluid">
-          <a class="navbar-brand" href="#"><img id="icon" src="images/icon.png"></a>
+          <a class="navbar-brand" href="#"><img id="icon" src="images/newicon.png"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <h2 class="button" id="title">Weather.com</h2>
+            
+
+              <li class="nav-item">
+                <button class="button" id="Current"><h2 id="bar">NWC.inc</h2></button>
+              </li>
               <li class="nav-item">
                 <button class="button" id="Current"><h2 id="bar">Current Updates</h2></button>
               </li>
@@ -34,12 +88,16 @@
           </div>
         </div>
       </nav>
-      <h1 id="update">Daily Weather Updates <br>Weather.com</h1>
+      <h1 id="update"><b>TODAY'S FORECAST</b> <br id="watermark">National Weather Corporation</h1>
       <br>
       <div style="position: relative; left: 5rem; top: 5rem;" id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img id="slide" src="images/icon.png" class="d-block w-100" alt="...">
+        <div class="carousel-inner" id="todayslide">
+          <div class="carousel-item active" style="position: relative; height: inherit;"> <!--today slide posts todays average weather stats-->
+            <img id="slide" src="images/todayslide/background/darkbluesky.png" class="d-block w-100 displayimg" alt="...">
+            <div id="overlayimg" style="position: absolute; top:0; left:0;"><img id = "overlayimgtxt" class="d-block w-100 displayimg" src="images/todayslide/overlays/ocloudy.png"></div> <!--setting "position" attributes not working when done through CSS; so I did it manually c.c-->
+            <div id="iconimg" class="floaty"  style="position: absolute; top:0; left:0;"><img id = "icontxt" class="d-block w-100 displayimg" src=""></div> 
+            <div id="slidetext" style="position: absolute; top:0; left:0;"> Phoenix AZ <p class="whitey" id="timenow">12 AM</p>   <p class="whitey" id="wdescrip">     </p></div> <!--the slide screen, works in layers, background > text > icon > overlay-->
+           
           </div>
           <div class="carousel-item">
             <img id="slide" src="images/sunrise.gif" class="d-block w-100" alt="...">
@@ -339,4 +397,5 @@
       </div>
     
 <script src="script/main.js"></script>
+<script src="script/slideshow.js"></script>
 </html>
